@@ -57,11 +57,11 @@ body {
     color: var(--color-link);
 }
 
-.intro-content p {
+.intro-content a {
     font-style:italic;
     color: var(--color-text);
 }
 
-.intro-content p:hover {
+.intro-content a:hover {
     color: var(--color-link);
 }
