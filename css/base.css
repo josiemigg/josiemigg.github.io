@@ -1,0 +1,57 @@
+
+@font-face {
+    font-family: 'rimouski';
+    src: local('rimouski'), 
+    url('../fonts/rimouski.otf') format('opentype');
+}
+
+body {
+    background-color:rgb(10, 10, 17);
+    color: rgb(255, 255, 255);
+    /* font-family: 'Roboto', sans-serif; */
+    /* cursor: url('http://www.rw-designer.com/cursor-extern.php?id=101'), auto; */
+    font-family: 'rimouski', sans-serif;
+}
+
+:root {
+    --hover-color: lightblue;
+    --h-trans: color 0.2s;
+}
+
+/* page title */
+#josiah {
+    color: rgb(255, 255, 255);
+    font-size: 3em;
+    text-align: left;
+    font-style: italic;
+    letter-spacing: 0.2em;
+    text-decoration: none;
+    transition: var(--h-trans);
+}
+#josiah:hover {
+    color: var(--hover-color);
+}
+
+.horizontal-box {
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center;
+    padding: 1em 1.5em; /* vertical, horizontal */
+}
+
+/* header items... links on the right side */
+.hitems { 
+    display: flex;
+    justify-content: space-around;
+    gap: 30px;
+    font-size: 1em;
+}
+
+.hitems a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    transition: var(--h-trans);
+}
+.hitems a:hover {
+    color: var(--hover-color);
+}
