@@ -14,13 +14,14 @@ body {
 }
 
 :root {
-    --hover-color: lightblue;
+    --color-text: white;
+    --color-link: lightblue;
     --h-trans: color 0.2s;
 }
 
 /* page title */
 #josiah {
-    color: rgb(255, 255, 255);
+    color: var(--color-text);
     font-size: 3em;
     text-align: left;
     font-style: italic;
@@ -29,7 +30,7 @@ body {
     transition: var(--h-trans);
 }
 #josiah:hover {
-    color: var(--hover-color);
+    color: var(--color-link);
 }
 
 .horizontal-box {
@@ -48,10 +49,19 @@ body {
 }
 
 .hitems a {
-    color: rgb(255, 255, 255);
+    color: var(--color-text);
     text-decoration: none;
     transition: var(--h-trans);
 }
 .hitems a:hover {
-    color: var(--hover-color);
+    color: var(--color-link);
+}
+
+.intro-content p {
+    font-style:italic;
+    color: var(--color-text);
+}
+
+.intro-content p:hover {
+    color: var(--color-link);
 }
