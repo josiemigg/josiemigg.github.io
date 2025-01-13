@@ -5,18 +5,20 @@
     url('../fonts/rimouski.otf') format('opentype');
 }
 
+:root {
+    --color-text: black;
+    --color-link: rgb(176, 0, 0);
+    --h-trans: color 0.2s;
+    --side-pad: 2em;
+}
+
 body {
-    background-color:rgb(10, 10, 17);
-    color: rgb(255, 255, 255);
+    background-color:rgb(255, 246, 227);
+    color: rgb(0, 0, 0);
     /* font-family: 'Roboto', sans-serif; */
     /* cursor: url('http://www.rw-designer.com/cursor-extern.php?id=101'), auto; */
     font-family: 'rimouski', sans-serif;
-}
-
-:root {
-    --color-text: white;
-    --color-link: lightblue;
-    --h-trans: color 0.2s;
+    padding: 0em var(--side-pad); /* vertical, horizontal */
 }
 
 /* page title */
@@ -36,16 +38,15 @@ body {
 .horizontal-box {
     display: flex; 
     justify-content: space-between; 
-    align-items: center;
-    padding: 1em 1.5em; /* vertical, horizontal */
+    align-items: baseline;
+    padding: 1em 0em; /* vertical, horizontal */
 }
 
 /* header items... links on the right side */
 .hitems { 
     display: flex;
-    justify-content: space-around;
-    gap: 30px;
-    font-size: 1em;
+    gap: 2em;
+    font-size: 1.2em;
 }
 
 .hitems a {

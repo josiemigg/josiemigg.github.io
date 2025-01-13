@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>4x4 Grid</title>
+    <style>
+        .wrapper {
+            display: inline-block;
+            border-spacing: 0;
+        }
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(4, 1fr);
+            gap: 0;
+            width: 200px; /* Adjust as needed */
+            height: 200px; /* Adjust as needed */
+        }
+        .grid-item {
+            border: 1px solid black;
+            box-sizing: border-box;
+        }
+        .grid-item:not(:last-child) {
+            border-right: none;
+        }
+        .grid-item:nth-child(4n) {
+            border-right: 1px solid black;
+        }
+        .grid-item:not(:nth-last-child(-n+4)) {
+            border-bottom: none;
+        }
+        .grid-item:nth-last-child(-n+4) {
+            border-bottom: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="grid-container">
+            <div class="grid-item"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item"></div>
+        </div>
+    </div>
+</body>
+</html>

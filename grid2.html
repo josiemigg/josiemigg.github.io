@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>4x4 Grid</title>
+    <style>
+        .wrapper {
+        display: inline-grid;
+        grid-template-columns: 50px 50px 50px 50px;
+        border: 1px solid black;
+        grid-gap: 1px;
+        background-color: black;
+        }
+
+        .wrapper > div {
+        background-color: lightblue;
+        padding: 15px;
+        text-align: center;
+        }
+        body {
+            background-color: lightblue;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div>about</div>
+        <div>github</div>
+        <div>linkedin</div>
+        <div>portfolio</div>
+    </div>
+</body>
+</html>
