@@ -66,3 +66,18 @@ body {
 .intro-content a:hover {
     color: var(--color-link);
 }
+
+.pdf-button {
+    margin: 20px auto; /* vertical, horizontal */
+    display: block; /* center the button */
+    padding: 10px 15px; /* vertical, horizontal */
+    cursor: pointer;
+    background-color: #007bff; /* blue background */
+    color: white; /* white text */
+    border: none; /* no border */
+    border-radius: 4px; /* rounded corners */
+}
+
+.pdf-button:hover {
+    background-color: #006de2;
+}

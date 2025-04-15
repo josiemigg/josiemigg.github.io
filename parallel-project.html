@@ -30,7 +30,7 @@
     <div style="text-align: center;">
         <p style="font-size: 1.5em; font-weight: bold;">Project Proposal</p>
         <div class="container">
-            <button id="togglePdf" style="margin: 20px auto; display: block; padding: 10px 15px; cursor: pointer; background-color: #007bff; color: white; border: none; border-radius: 4px;">Show PDF</button>
+            <button id="togglePdf" class="pdf-button">Show PDF</button>
             
             <div id="pdfContainer" class="pdf-container" style="text-align: center; margin: 20px auto; display: none;">
                 <object data="./content/project-proposal.pdf" type="application/pdf" width="850" height="1100">
@@ -40,10 +40,30 @@
             </div>
         </div>
 
-        <p style="text-align: center; font-size: 1.5em; font-weight: bold;">Milestone Report</p>
-        <p>-</p>
+        <p style="font-size: 1.5em; font-weight: bold;">Milestone Report</p>
+        <div class="container">
+            <button id="togglePdfMilestone" class="pdf-button">Show PDF</button>
+            
+            <div id="pdfContainerMilestone" class="pdf-container" style="text-align: center; margin: 20px auto; display: none;">
+                <object data="./content/project-milestone.pdf" type="application/pdf" width="850" height="1100">
+                    <p>It appears you don't have a PDF plugin for this browser. 
+                    You can <a href="./content/project-milestone.pdf">click here to download the PDF file</a>.</p>
+                </object>
+            </div>
 
-        <p style="text-align: center; font-size: 1.5em; font-weight: bold;">Final Report</p>
+        </div>
+        <div class="video-container" style="text-align: center; margin: 20px auto;">
+            <video controls width="400" style="margin: 10px;">
+                <source src="./content/b1.webm" type="video/webm">
+                Your browser does not support the video tag.
+            </video>
+            <video controls width="400" style="margin: 10px;">
+                <source src="./content/b2.webm" type="video/webm">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+
+        <p style="font-size: 1.5em; font-weight: bold;">Final Report</p>
         <p>-</p>
     </div>
 
@@ -51,6 +71,19 @@
         document.getElementById('togglePdf').addEventListener('click', function() {
             const pdfContainer = document.getElementById('pdfContainer');
             const button = document.getElementById('togglePdf');
+            
+            if (pdfContainer.style.display === 'none') {
+                pdfContainer.style.display = 'block';
+                button.textContent = 'Hide PDF';
+            } else {
+                pdfContainer.style.display = 'none';
+                button.textContent = 'Show PDF';
+            }
+        });
+
+        document.getElementById('togglePdfMilestone').addEventListener('click', function() {
+            const pdfContainer = document.getElementById('pdfContainerMilestone');
+            const button = document.getElementById('togglePdfMilestone');
             
             if (pdfContainer.style.display === 'none') {
                 pdfContainer.style.display = 'block';
