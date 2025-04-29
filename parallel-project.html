@@ -49,22 +49,43 @@
                     <p>It appears you don't have a PDF plugin for this browser. 
                     You can <a href="./content/project-milestone.pdf">click here to download the PDF file</a>.</p>
                 </object>
-            </div>
 
-        </div>
-        <div class="video-container" style="text-align: center; margin: 20px auto;">
-            <video controls width="400" style="margin: 10px;">
-                <source src="./content/b1.webm" type="video/webm">
-                Your browser does not support the video tag.
-            </video>
-            <video controls width="400" style="margin: 10px;">
-                <source src="./content/b2.webm" type="video/webm">
-                Your browser does not support the video tag.
-            </video>
+                <div class="video-container" style="text-align: center; margin: 20px auto;">
+                    <video controls width="400" style="margin: 10px;">
+                        <source src="./content/b1.webm" type="video/webm">
+                        Your browser does not support the video tag.
+                    </video>
+                    <video controls width="400" style="margin: 10px;">
+                        <source src="./content/b2.webm" type="video/webm">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
         </div>
 
         <p style="font-size: 1.5em; font-weight: bold;">Final Report</p>
-        <p>-</p>
+        <div class="container">
+            <button id="togglePdfFinal" class="pdf-button">Show PDF</button>
+            
+            <div id="pdfContainerFinal" class="pdf-container" style="text-align: center; margin: 20px auto; display: none;">
+                <object data="./content/project-final.pdf" type="application/pdf" width="850" height="1100">
+                    <p>It appears you don't have a PDF plugin for this browser. 
+                    You can <a href="./content/project-final.pdf">click here to download the PDF file</a>.</p>
+                </object>
+            </div>
+        </div>
+
+        <p style="font-size: 1.5em; font-weight: bold;">Final Poster</p>
+        <div class="container">
+            <button id="togglePdfPoster" class="pdf-button">Show PDF</button>
+            
+            <div id="pdfContainerPoster" class="pdf-container" style="text-align: center; margin: 20px auto; display: none;">
+                <object data="./content/project-poster.pdf" type="application/pdf" width="960" height="720">
+                    <p>It appears you don't have a PDF plugin for this browser. 
+                    You can <a href="./content/project-Poster.pdf">click here to download the PDF file</a>.</p>
+                </object>
+            </div>
+        </div>
     </div>
 
     <script>
@@ -84,6 +105,32 @@
         document.getElementById('togglePdfMilestone').addEventListener('click', function() {
             const pdfContainer = document.getElementById('pdfContainerMilestone');
             const button = document.getElementById('togglePdfMilestone');
+            
+            if (pdfContainer.style.display === 'none') {
+                pdfContainer.style.display = 'block';
+                button.textContent = 'Hide PDF';
+            } else {
+                pdfContainer.style.display = 'none';
+                button.textContent = 'Show PDF';
+            }
+        });
+
+        document.getElementById('togglePdfFinal').addEventListener('click', function() {
+            const pdfContainer = document.getElementById('pdfContainerFinal');
+            const button = document.getElementById('togglePdfFinal');
+            
+            if (pdfContainer.style.display === 'none') {
+                pdfContainer.style.display = 'block';
+                button.textContent = 'Hide PDF';
+            } else {
+                pdfContainer.style.display = 'none';
+                button.textContent = 'Show PDF';
+            }
+        });
+
+        document.getElementById('togglePdfPoster').addEventListener('click', function() {
+            const pdfContainer = document.getElementById('pdfContainerPoster');
+            const button = document.getElementById('togglePdfPoster');
             
             if (pdfContainer.style.display === 'none') {
                 pdfContainer.style.display = 'block';
